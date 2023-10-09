@@ -1,0 +1,134 @@
+.BannerInicio{
+    display: flex;
+    margin-top: 38px;
+    &-content{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1{
+            color: $primary;
+            font-size: 56px;
+            font-weight: 700;
+        }
+        h3{
+            color: $black;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        &-btns{
+            display: flex;
+            width: fit-content;
+            gap: 30px;
+            margin-top: 40px;
+            &-pri,
+            &-sec{
+                font-size: 20px;
+                font-weight: 500;
+                font-family: 'Poppins';
+                color: $white;
+                border: none;
+                width: 170px;
+                height: 48px;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: .2s ease-in-out;
+                &:hover{
+                    scale: calc(1.02);
+                    background: $white;
+                    color: $black;
+                    font-weight: 600;
+                    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+                }
+            }
+            &-pri{
+                background: $primary;
+            }
+            &-sec{
+                background: $tertiary;
+            }
+        }
+    }
+    img{
+        flex: 1;
+        width: 800px;
+        animation: floatingEffect 2.5s ease-in-out infinite;
+    }
+}
+
+@keyframes floatingEffect {
+    0% {
+      transform: translateY(0); /* Comenzamos sin desplazamiento */
+    }
+    50% {
+      transform: translateY(-15px); /* Desplazamos la imagen hacia arriba en la mitad de la animación */
+    }
+    100% {
+      transform: translateY(0); /* Regresamos la imagen a su posición original al final de la animación */
+    }
+  }
+
+@media (max-width: 1670px) {
+    .BannerInicio{
+        &-content{
+            h1{
+                font-size: 46px;
+            }
+        }
+        img{
+            width: 700px;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .BannerInicio{
+        &-content{
+            h1{
+                font-size: 42px;
+            }
+        }
+        img{
+            width: 600px;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .BannerInicio{
+        flex-direction: column;
+        gap: 4rem;
+        &-content{
+            align-items: center;
+            text-align: center;
+        }
+        img{
+            flex: 1;
+            width: 95%;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .BannerInicio{
+        &-content{
+            h1{
+                font-size: 36px;
+                line-height: 130%;
+                margin-bottom: 1rem;
+            }
+            h3{
+                font-size: 20px;
+            }
+            &-btns{
+                gap: 20px;
+                &-pri,
+                &-sec{
+                    font-size: 18px;
+                    width: 150px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+}

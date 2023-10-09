@@ -1,0 +1,119 @@
+.Categorias{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    &-card1{
+        background-image: url('/teclados.png');
+    }
+    &-card2{
+        background-image: url('/keycaps.png');
+    }
+    &-card3{
+        background-image: url('/switches.png');
+    }
+    &-card1,
+    &-card2,
+    &-card3{
+        position: relative;
+        z-index: 1;
+        flex: 1;
+        min-width: 200px;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 25px;
+        box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.25);
+        &-filter {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(196, 196, 196, 0.20) 100%);
+        }
+        &-info {
+            opacity: 0;
+            border-radius: 25px;
+            background: rgba(0, 0, 0, 0.70);
+            backdrop-filter: blur(3px);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            min-height: 250px;
+            overflow: visible;
+            transition: opacity 0.3s ease-in-out;
+            gap: 15px;
+            cursor: default;
+            h2{
+                font-size: 42px;
+                font-weight: 700;
+                color: #F4F4F4;
+            }
+            &-btn{
+                width: 166px;
+                height: 39px;
+                border-radius: 15px;
+                background: $primary;
+                font-size: 18px;
+                font-weight: 500;
+                color: white;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: .2s ease-in-out;
+                &:hover{
+                    scale: calc(1.02);
+                    background: $white;
+                    color: $black;
+                    font-weight: 600;
+                    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+        &:hover &-info {
+            opacity: 1;
+        }
+        &:hover {
+            &-info {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .Categorias{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .Categorias{
+        &-card1,
+        &-card2,
+        &-card3{
+            flex: none;
+            height: 150px;
+            &-info {
+                min-height: 150px;
+                gap: 10px;
+                h2{
+                    font-size: 32px;
+                }
+                &-btn{
+                    width: 130px;
+                    height: 35px;
+                    border-radius: 12px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+

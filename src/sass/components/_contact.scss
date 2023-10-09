@@ -1,0 +1,111 @@
+.Contact{
+    margin: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        font-size: 42px;
+        font-weight: 600;
+        color: $secondary;
+        margin-bottom: 100px;
+    }
+    &-btns{
+        display: flex;
+        height: fit-content;
+        align-items: center;
+        gap: 160px;
+        &-face,
+        &-wasa{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 25px;
+            transition: .3s ease-in-out !important;
+            cursor: pointer;
+            span{
+                padding: 19px 0;
+                font-size: 28px;
+                color: #FFF;
+                font-weight: 600;
+                margin: 0 45px;
+            }
+            img{
+                margin-left: 20px;
+            }
+        }
+        &-face{
+            background: linear-gradient(0deg, #0070E6 19.4%, #11ADFD 100%);
+            &:hover{
+                box-shadow: 0px 0px 15px #0070E6;
+                scale: calc(1.04);
+            }
+        }
+        &-wasa{
+            background: linear-gradient(180deg, #47C530 0%, #109608 100%);
+            &:hover{
+                box-shadow: 0px 0px 15px #47C530;
+                scale: calc(1.04);
+            }
+        }   
+    }
+}
+
+@media (max-width: 1300px) {
+    .Contact{
+        &-btns{
+            gap: 80px;
+            span{
+                padding: 19px 0;
+                font-size: 28px;
+                margin: 0 45px;
+            }
+            img{
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .Contact{
+        &-btns{
+            span{
+                padding: 15px 0;
+                font-size: 24px;
+                margin: 0 35px;
+            }
+            img{
+                width: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 930px) {
+    .Contact{
+        h1{
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        &-btns{
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .Contact{
+        &-btns{
+            span{
+                font-size: 20px;
+                margin: 0 20px;
+            }
+            &-face,
+            &-wasa{
+                width: 100%;
+            }
+        }
+    }
+}

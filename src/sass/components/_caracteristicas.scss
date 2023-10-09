@@ -1,0 +1,183 @@
+.Caracteristicas{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-materiales{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h1{
+            font-size: 42px;
+            font-weight: 600;
+            color: $secondary;
+            position: relative;
+            margin-bottom: 50px;
+
+            &::after{
+                content: "";
+                display: block;
+                width: 300px; 
+                height: 5px; 
+                background-color: $primary; 
+                position: absolute;
+                bottom: -15px; 
+                left: calc(50% - 150px)
+            }
+        }
+        p{
+            font-size: 18px;
+            font-weight: 500;
+            color: $black;
+            max-width: 1000px;
+            margin-bottom: 35px;
+        }
+        img{
+            width: calc(100% + 260px);
+            align-self: center;
+        }
+    }
+    &-resistencia{
+        padding-left: 130px;
+    }
+    &-ergonomico{
+        padding-right: 130px;
+        flex-direction: row-reverse;
+    }
+    &-resistencia,
+    &-ergonomico{
+        width: calc(100% + 130px);
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+
+        h1{
+            font-size: 42px;
+            font-weight: 600;
+            color: $secondary;
+            position: relative;
+            margin-bottom: 28px;
+
+            &::after{
+                content: "";
+                display: block;
+                width: 300px; 
+                height: 5px; 
+                background-color: $primary; 
+                position: absolute;
+                bottom: -10px; 
+                left: 0;
+            }
+        }
+        p{
+            font-size: 18px;
+            font-weight: 500;
+            color: $black;
+            max-width: 650px;
+        }
+
+        img{
+            max-width: 1040px;
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 1540px) {
+    .Caracteristicas{
+        &-materiales{
+            img{
+                width: calc(100% + 160px);
+            }
+        }
+        &-resistencia{
+            padding-left: 80px;
+        }
+        &-ergonomico{
+            padding-right: 80px;
+        }
+        &-resistencia,
+        &-ergonomico{
+            width: calc(100% + 80px);
+            h1{
+                font-size: 34px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .Caracteristicas{
+        &-materiales{
+            img{
+                width: calc(100% + 40px);
+            }
+        }
+        &-resistencia{
+            padding-left: 0;
+            &-info{
+                align-self: flex-start;
+            }
+            img{
+                align-self: flex-end;
+                width: 90%;
+            }
+        }
+        &-ergonomico{
+            padding-right: 0;
+            &-info{
+                align-self: flex-start;
+            }
+            img{
+                align-self: flex-start;
+                width: 90%;
+            }
+        }
+        &-resistencia,
+        &-ergonomico{
+            &-info{
+                padding-left: 20px;
+            }
+            width: calc(100% + 40px);
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .Caracteristicas{
+        &-materiales{
+            h1{
+                font-size: 24px;
+                margin-bottom: 40px;
+                &::after{
+                    width: 150px; 
+                    left: calc(50% - 75px)
+                }
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        &-resistencia,
+        &-ergonomico{
+            &-info{
+                margin-right: 20px;
+            }
+            h1{
+                font-size: 24px;
+                margin-bottom: 25px;
+                &::after{
+                    width: 150px; 
+                }
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}
