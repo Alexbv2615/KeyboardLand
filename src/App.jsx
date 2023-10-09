@@ -5,7 +5,7 @@ import Clientes from './components/Clientes';
 import Contact from './components/Contact';
 import Productos from './components/Productos';
 import ScrollToTop from './components/ScrollToTop';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 import './sass/index.scss';
 
 function App() {
